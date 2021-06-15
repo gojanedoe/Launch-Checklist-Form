@@ -31,6 +31,16 @@ window.addEventListener("load", function () {
          alert("All fields are required.");
       }
 
+      // Alert if string inputs are not strings
+      if (typeof userInputs[0].value === "string" || typeof userInputs[1].value === "string") {
+         alert("Please enter a string for Pilot Name and Co-pilot Name.");
+      }
+
+      // Alert if number inputs are not numbers
+      if (isNaN(userInputs[2].value) || isNaN(userInputs[3].value)) {
+         alert("Please enter a number for Fuel Level and Cargo Mass.");
+      }
+
       // Don't submit form yet
       event.preventDefault();
    });
