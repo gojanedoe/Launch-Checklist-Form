@@ -34,7 +34,7 @@ function inputValidation() {
    // Alert if missing input or invalid input type
    if (missingInput) {
       alert("All fields are required.");
-   } else if (typeof userInputs[0].value !== "string" || typeof userInputs[1].value !== "string") {
+   } else if (typeof userInputs[0].value !== "string" || typeof userInputs[1].value !== "string" || !isNaN(userInputs[0].value) || !isNaN(userInputs[1].value)) {
       alert("Please enter a name for Pilot Name and Co-pilot Name.");
       missingString = true;
    } else if (isNaN(userInputs[2].value) || isNaN(userInputs[3].value)) {
